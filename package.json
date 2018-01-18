@@ -6,8 +6,15 @@
   "dependencies": {
     "pixi.js": "^4.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "webpack": "^3.10.0"
+  },
   "scripts": {
+    "clean": "rm -rf dist",
+    "build:dev": "webpack --config config/webpack.config.dev.js",
+    "build": "yarn run clean && yarn run build:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
